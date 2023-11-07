@@ -4,11 +4,12 @@
     <title>Acierta la edad de mi primo</title>
 </head>
 <body>
-    <h1>Bienvenido al juego de la vida de mi primo</h1>
+    <h1>¿Podrás acertar la edad de mi primo?</h1>
     <form action = "{% url 'guess' %}" method = post>
         {% csrf_token%}
         <input type="number" name="guess" required>
-        <button type="submit">Submit</button>
+        <button type="submit">Dale caña</button>
     </form>
+
 </body>
 </html>

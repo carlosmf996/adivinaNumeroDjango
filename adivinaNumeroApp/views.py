@@ -7,15 +7,15 @@ def home(request):
         return render(request, 'adivina/home.html')
             
 def guess(request):         
-    random_number = random.randint(1,100)
-    user_guess = int(request.POST['guess'])
+    random_number = random.randint(1,10)
+    guess = int(request.POST['guess'])
 
-    if user_guess == random_number:
-       message = 'Vaya tio weno'
+    if guess == random_number:
+       message = 'VAYA TIO WENO'
 
-    if user_guess > random_number:
+    if guess > random_number:
         message = 'Un poquito pabajo'
-    else:
+    if guess < random_number:
         message = 'Un poquito parriba'
 
     return render(request, 'adivina/guess.html', {'message': message})
